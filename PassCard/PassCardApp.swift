@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PassCardApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    @StateObject private var vm = ViewModel();
+        var body: some Scene {
+            WindowGroup {
+                ContentView()
+            }
+            .environmentObject(vm)
         }
-    }
 }
